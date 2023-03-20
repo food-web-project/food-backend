@@ -8,7 +8,7 @@ const env = process.env;
 const app = express();
 const port = process.env.PORT || 5000;
 
-app.use(cors({ origin: `${env.BASE_URL}`, }))
+app.use(cors({ origin: "https://food-webapp-robot.netlify.app/", }))
 
 app.use(express.json())
 
