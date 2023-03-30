@@ -23,19 +23,39 @@ const ItemSchema = new Schema({
         type: String,
         require: true
     },
-    Allergens: {
-        type: String
-    },
     CategoryID: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'category',
         require: true
     },
+    type: {
+        type: String,
+        require: true
+    },
     Category: {
         type: String,
         require: true
+    },
+    Milk: {
+        type: Boolean,
+        default: null
+    },
+    Egg: {
+        type: Boolean,
+        default: null
+    },
+    Mustard: {
+        type: Boolean,
+        default: null
+    },
+    Barley: {
+        type: Boolean,
+        default: null
+    },
+    Wheat: {
+        type: Boolean,
+        default: null
     }
-
 });
 
 module.exports = mongoose.model('item', ItemSchema)
